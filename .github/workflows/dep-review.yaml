@@ -3,6 +3,7 @@ on: [pull_request]
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   dependency-review:
@@ -11,7 +12,7 @@ jobs:
       - name: "Checkout Repository"
         uses: actions/checkout@v4
       - name: Dependency Review
-        uses: actions/dependency-review-action@v4
+        uses: actions/dependency-review-action@v4.2.3
         with:
           deny-licenses: Apache-2.0
           comment-summary-in-pr: always
