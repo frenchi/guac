@@ -14,3 +14,4 @@ jobs:
         uses: actions/dependency-review-action@v4
         with:
           deny-licenses: Apache-2.0
+          comment-summary-in-pr: always
